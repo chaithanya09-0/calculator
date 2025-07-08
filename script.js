@@ -60,7 +60,7 @@ buttonContainer.addEventListener("click" , (event)=>{
 
     let displayText = display.textContent
     let hasOperator = (displayText.includes("+") || displayText.includes("-") || displayText.includes("*") || displayText.includes("/"));
-    let arr = displayText.split(operator);
+    let arr = (operator !== "") ? displayText.split(operator) : [];
     let hasTwoOperands = (arr.length === 2)
     let justEvaluated;
     
@@ -167,6 +167,7 @@ buttonContainer.addEventListener("click" , (event)=>{
                 result = operate(displayText, operator);
                 operator = "+";
                 displayText = `${result}` + operator;
+                justEvaluated = false;
             }else{
                 operator = "+"
                 displayText = (hasOperator) ? displayText.slice(0,-1) + "+" : displayText + "+";
