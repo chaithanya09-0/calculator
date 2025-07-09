@@ -6,25 +6,6 @@ let result;
 const buttonContainer = document.querySelector(".buttonContainer");
 const display = document.querySelector(".display");
 
-
-
-
-function addition(firstOperand , secondOperand) {
-    return firstOperand + secondOperand;
-}
-
-function subtraction(firstOperand , secondOperand) {
-    return firstOperand - secondOperand;
-}
-
-function multiplication(firstOperand , secondOperand) {
-    return firstOperand * secondOperand;
-}
-
-function division(firstOperand , secondOperand) {
-    return firstOperand / secondOperand;
-}
-
 function operate(string , operator){
     let arr = string.split(operator);
     let firstOperand = Number(arr[0]);
